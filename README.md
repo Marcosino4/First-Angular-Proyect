@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación de tipo **Single Page Application (SPA)** construida con **Angular 18+** (Standalone Components) y **Angular Material**.
 
-Representa un **Panel de Administración Completo** que simula un entorno real de gestión empresarial, incluyendo autenticación simulada, gestión de usuarios (CRUD), visualización de métricas y personalización de interfaz con un sistema robusto de **Modo Oscuro**.
+Representa un **Panel de Administración Completo** que simula un entorno real de gestión empresarial, incluyendo autenticación simulada, gestión de usuarios (CRUD), visualización de métricas y personalización de interfaz con un sistema de modo oscuro.
 
 ---
 
@@ -47,7 +47,7 @@ Sigue estos pasos para probar el proyecto en tu entorno local:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone <url-del-repositorio>
+    git clone https://github.com/Marcosino4/First-Angular-Proyect.git
     cd First-Angular-Proyect
     ```
 
@@ -66,13 +66,13 @@ Sigue estos pasos para probar el proyecto en tu entorno local:
 
 ## 💡 Desafíos Técnicos y Soluciones Implementadas
 
-Durante el desarrollo de esta aplicación, nos enfrentamos a retos específicos de las versiones modernas de Angular y la personalización de Material Design.
+Durante el desarrollo de esta aplicación, me enfrente a retos específicos de las versiones modernas de Angular y la personalización de Material Design.
 
 ### 🔴 Problema 1: Incompatibilidad de `localStorage` con SSR
 **El Error:** Al intentar guardar la configuración del "Modo Oscuro", la consola arrojaba: `ReferenceError: localStorage is not defined`.
 **La Causa:** Angular 17/18 activa por defecto el **Server-Side Rendering (SSR)**. El código se ejecuta primero en el servidor (Node.js) para generar el HTML inicial. En el servidor no existe el objeto `window` ni `localStorage`.
 **La Solución:**
-Implementamos una inyección de dependencias para detectar la plataforma:
+Implementé una inyección de dependencias para detectar la plataforma:
 ```typescript
 // settings.service.ts
 import { PLATFORM_ID, Inject } from '@angular/core';
