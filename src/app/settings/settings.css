@@ -1,0 +1,25 @@
+.settings-card {
+  max-width: 600px;
+  margin: 20px auto;
+}
+.settings-content {
+  padding-top: 20px;
+}
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+.setting-info {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-weight: 500;
+  font-size: 16px;
+}
+.desc {
+  color: #7f8c8d;
+  font-size: 13px;
+}

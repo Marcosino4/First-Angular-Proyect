@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: calc(100vh - 64px);
+}
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.sidenav {
+  width: 240px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.main-container {
+  padding: 30px;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.content-bg {
+  background-color: var(--bg-app);
+}
+
+.active-link {
+  background-color: rgba(63, 81, 181, 0.15);
+  border-left: 4px solid #3f51b5;
+  color: #3f51b5 !important;
+}
+.active-link .mat-icon {
+  color: #3f51b5 !important;
+}

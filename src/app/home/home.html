@@ -1,0 +1,23 @@
+<div class="dashboard-header">
+  <div class="header-text">
+    <h1>Resumen General</h1>
+    <p>Bienvenido al panel de administración.</p>
+  </div>
+  <button mat-stroked-button (click)="refreshData()">
+    <mat-icon>refresh</mat-icon> Actualizar
+  </button>
+</div>
+
+<div class="stats-grid">
+  <mat-card *ngFor="let card of cards" class="stat-card">
+    <mat-card-content class="card-content">
+      <div class="icon-box">
+        <mat-icon [ngClass]="card.color">{{ card.icon }}</mat-icon>
+      </div>
+      <div class="info-box">
+        <span class="card-title">{{ card.title }}</span>
+        <span class="card-value">{{ card.prefix }}{{ card.value | number }}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

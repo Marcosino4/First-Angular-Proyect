@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --bg-app: #f5f7fa;
+  --bg-panel: #ffffff;
+  --text-primary: #333333;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #333333;
+}
+
+body.dark-theme {
+  --bg-app: #121212;        
+  --bg-panel: #1e1e1e;      
+  --text-primary: #ffffff;  
+  --sidebar-bg: #1e1e1e;
+  --sidebar-text: #ffffff;
+}
+
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mat-toolbar.mat-primary {
+  background: #3f51b5;
+  color: #ffffff !important;
+  position: sticky; top: 0; z-index: 1000;
+}
+.mat-toolbar .mat-icon { color: #ffffff !important; }
+
+.mat-drawer {
+  background-color: var(--sidebar-bg) !important;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.mat-mdc-card, .mat-mdc-dialog-surface {
+  background-color: var(--bg-panel) !important;
+  color: var(--text-primary) !important;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-app); }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, 
+body.dark-theme p, body.dark-theme span, body.dark-theme div {
+  color: #ffffff !important;
+}
+
+body.dark-theme .mat-mdc-table { background-color: var(--bg-panel) !important; }
+body.dark-theme .mat-mdc-header-cell { color: #ffffff !important; font-weight: bold; }
+body.dark-theme .mat-mdc-cell {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255,255,255,0.1) !important;
+}
+
+
+body.dark-theme input.mat-input-element,
+body.dark-theme input.mat-mdc-input-element {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+
+body.dark-theme .mat-mdc-form-field-label,
+body.dark-theme .mat-mdc-floating-label { color: #ffffff !important; }
+body.dark-theme ::placeholder { color: rgba(255, 255, 255, 0.5) !important; }
+
+body.dark-theme .mdc-notched-outline__leading,
+body.dark-theme .mdc-notched-outline__notch,
+body.dark-theme .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.dark-theme .mat-mdc-form-field.mat-focused .mdc-notched-outline__leading,
+body.dark-theme .mat-mdc-form-field.mat-focused .mdc-notched-outline__notch,
+body.dark-theme .mat-mdc-form-field.mat-focused .mdc-notched-outline__trailing {
+  border-color: #ffffff !important;
+  border-width: 2px !important;
+}
+
+body.dark-theme .mat-icon, 
+body.dark-theme .mat-mdc-button,
+body.dark-theme .mat-mdc-raised-button, 
+body.dark-theme .mat-mdc-stroked-button, 
+body.dark-theme .mat-mdc-icon-button {
+  color: #ffffff !important;
+}
+body.dark-theme .mat-mdc-stroked-button { border-color: rgba(255,255,255,0.5) !important; }
+
+.status-badge {
+  color: #000000 !important; 
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background-color: #e8f5e9 !important;
+  color: #1b5e20 !important;
+}
+
+.status-badge.inactive {
+  background-color: #ffebee !important;
+  color: #b71c1c !important;
+}
+
+.status-badge.pending {
+  background-color: #fff3e0 !important;
+  color: #e65100 !important;
+}

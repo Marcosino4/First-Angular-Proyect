@@ -1,0 +1,44 @@
+<h2>Configuración del Sistema</h2>
+
+<mat-card class="settings-card">
+  <mat-card-header>
+    <mat-card-title>Preferencias Generales</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content class="settings-content">
+    
+    <div class="setting-row">
+      <div class="setting-info">
+        <span class="label">Notificaciones por Email</span>
+        <span class="desc">Recibir resúmenes semanales</span>
+      </div>
+      <mat-slide-toggle color="primary" [(ngModel)]="emailNotif"></mat-slide-toggle>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="setting-row">
+      <div class="setting-info">
+        <span class="label">Modo Oscuro</span>
+        <span class="desc">Cambiar la interfaz a colores oscuros</span>
+      </div>
+      <mat-slide-toggle color="primary" [(ngModel)]="darkMode"></mat-slide-toggle>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="setting-row">
+      <div class="setting-info">
+        <span class="label">Guardado Automático</span>
+        <span class="desc">Guardar cambios al editar usuarios</span>
+      </div>
+      <mat-slide-toggle color="primary" [(ngModel)]="autoSave"></mat-slide-toggle>
+    </div>
+
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-button>Restaurar</button>
+    <button mat-raised-button color="primary" (click)="saveSettings()">Guardar Cambios</button>
+  </mat-card-actions>
+</mat-card>
